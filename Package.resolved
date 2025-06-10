@@ -1,0 +1,105 @@
+{
+  "originHash" : "1aa7dea036e968e25aedd2432a96e42456e5c12097f1cdc3828d5afe36226699",
+  "pins" : [
+    {
+      "identity" : "catena",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Fleuronic/Catena",
+      "state" : {
+        "branch" : "main",
+        "revision" : "53198be3fe65eee910bca486054f55dd851c52c2"
+      }
+    },
+    {
+      "identity" : "catenoid",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Fleuronic/Catenoid",
+      "state" : {
+        "branch" : "main",
+        "revision" : "2e70f327d88c4b8d978e4d091e555dcae3f3f27b"
+      }
+    },
+    {
+      "identity" : "differ",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tonyarnold/Differ",
+      "state" : {
+        "revision" : "5520fda947f1f9777a806389c2ba587219bc0538",
+        "version" : "1.4.6"
+      }
+    },
+    {
+      "identity" : "identity",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jordanekay/Identity",
+      "state" : {
+        "branch" : "master",
+        "revision" : "8764a54c8e5ef0d14f3dc2ec5c10223ed0411a4d"
+      }
+    },
+    {
+      "identity" : "persistdb",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jordanekay/PersistDB",
+      "state" : {
+        "branch" : "master",
+        "revision" : "6ec3569d31ae6996d2c2256cce6ab0c528c15749"
+      }
+    },
+    {
+      "identity" : "reactiveswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReactiveCocoa/ReactiveSwift.git",
+      "state" : {
+        "branch" : "swift-concurrency",
+        "revision" : "3d40187c982346352d0adbe6b38e0e3d53fddc95"
+      }
+    },
+    {
+      "identity" : "schemata",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jordanekay/Schemata",
+      "state" : {
+        "branch" : "master",
+        "revision" : "b8722d45a75a755f17907ba6d3765c23e5e46a7a"
+      }
+    },
+    {
+      "identity" : "swift-memberwise-init-macro",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/gohanlon/swift-memberwise-init-macro",
+      "state" : {
+        "revision" : "47a2bdf45f1567e7324438f8482e362ee1c3fb44",
+        "version" : "0.5.2"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-syntax",
+      "state" : {
+        "revision" : "0687f71944021d616d34d922343dcef086855920",
+        "version" : "600.0.1"
+      }
+    },
+    {
+      "identity" : "trivial",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Fleuronic/Trivial",
+      "state" : {
+        "branch" : "main",
+        "revision" : "043cd998fbbb7b5c140f9f45b9c035a9964ad3d9"
+      }
+    },
+    {
+      "identity" : "trivialservice",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Fleuronic/TrivialService",
+      "state" : {
+        "branch" : "main",
+        "revision" : "65e988b719fd33dfb903635d546d03977e2616c0"
+      }
+    }
+  ],
+  "version" : 3
+}
