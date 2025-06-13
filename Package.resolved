@@ -1,5 +1,5 @@
 {
-  "originHash" : "1aa7dea036e968e25aedd2432a96e42456e5c12097f1cdc3828d5afe36226699",
+  "originHash" : "742c6bd1d3c1bebcb54deaf3e10b81271e4732c2194939653aeff80cc751395a",
   "pins" : [
     {
       "identity" : "catena",
@@ -89,15 +89,6 @@
       "state" : {
         "branch" : "main",
         "revision" : "043cd998fbbb7b5c140f9f45b9c035a9964ad3d9"
-      }
-    },
-    {
-      "identity" : "trivialservice",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Fleuronic/TrivialService",
-      "state" : {
-        "branch" : "main",
-        "revision" : "65e988b719fd33dfb903635d546d03977e2616c0"
       }
     }
   ],

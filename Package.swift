@@ -1,4 +1,4 @@
-// swift-tools-version:6.0
+// swift-tools-version:6.1
 import PackageDescription
 
 let package = Package(
@@ -16,7 +16,7 @@ let package = Package(
 		),
 	],
 	dependencies: [
-		.package(url: "https://github.com/Fleuronic/TrivialService", branch: "main"),
+		.package(path: "../TrivialService"),
 		.package(url: "https://github.com/Fleuronic/Catenoid", branch: "main")
 	],
 	targets: [
@@ -33,6 +33,7 @@ let package = Package(
 	
 for target in package.targets {
 	target.swiftSettings = [
+		.enableExperimentalFeature("StrictConcurrency"),
 		.enableUpcomingFeature("ExistentialAny")
 	]
 }
