@@ -3,19 +3,33 @@
 import Schemata
 import PersistDB
 import struct Trivial.Question
+import struct Trivial.Category
 import protocol Catena.Representable
 import protocol Catenoid.Row
 import protocol Catenoid.Model
 import protocol TrivialService.QuestionFields
 
-private import MemberwiseInit
-
-@_UncheckedMemberwiseInit(.public)
 public struct QuestionRow: QuestionFields {
 	public let id: Question.ID
-	public let prompt: String
-	public let questionType: Question.QuestionType
-	public let difficulty: Question.Difficulty
+
+    private let prompt: String
+	private let questionType: Question.QuestionType
+	private let difficulty: Question.Difficulty
+    private let category: Category.IDFields
+
+    public init(
+        id: Question.ID,
+        prompt: String = "",
+        questionType: Question.QuestionType = .multipleChoice,
+        difficulty: Question.Difficulty = .easy,
+        category: Category.IDFields
+    ) {
+        self.id = id
+        self.prompt = prompt
+        self.questionType = questionType
+        self.difficulty = difficulty
+        self.category = category
+    }
 }
 
 // MARK: -
@@ -26,9 +40,9 @@ extension QuestionRow: Row {
 	// MARK: Representable
 	public var value: Value {
 		.init(
-			prompt: value.prompt,
-			questionType: value.questionType,
-			difficulty: value.difficulty
+			prompt: prompt,
+			questionType: questionType,
+			difficulty: difficulty
 		)
 	}
 
@@ -37,7 +51,8 @@ extension QuestionRow: Row {
 		[
 			\.value.prompt == prompt,
 			\.value.difficulty == difficulty,
-			\.value.questionType == questionType
+			\.value.questionType == questionType,
+            \.category == category.id
 		]
 	}
 }

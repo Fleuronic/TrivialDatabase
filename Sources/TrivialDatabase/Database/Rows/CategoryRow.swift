@@ -10,29 +10,21 @@ import protocol TrivialService.CategoryFields
 
 private import MemberwiseInit
 
-public final class CategoryRow: CategoryFields {
+public struct CategoryRow: CategoryFields {
 	public let id: Category.ID
 
 	private let name: String
-	private let parent: CategoryRow?
+    private let parent: Category.IDFields?
+
 
 	public init(
 		id: Category.ID,
-		name: String,
-		parentID: Category.ID? = nil,
-		parentName: String? = nil
+        name: String,
+        parent: Category.IDFields? = nil
 	) {
 		self.id = id
 		self.name = name
-
-		if let parentID, let parentName {
-			parent = .init(
-				id: parentID,
-				name: parentName
-			)
-		} else {
-			parent = nil
-		}
+        self.parent = parent
 	}
 }
 
@@ -43,13 +35,19 @@ extension CategoryRow: Row {
 
 	// MARK: Representable
 	public var value: Value {
-		.init(name: value.name)
+		.init(name: name)
 	}
 
 	// MARK: Model
 	public var valueSet: ValueSet<Model> {
-		[
-			\.value.name == name
+        let valueSet: ValueSet<Model> = [
+			\.value.name == name,
 		]
+
+        return if let parentID = parent?.id {
+            valueSet.update(with: [\.parentID == parentID])
+        } else {
+            valueSet
+        }
 	}
 }

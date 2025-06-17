@@ -4,8 +4,7 @@ import Catena
 import Schemata
 import PersistDB
 import struct Trivial.Category
-import class TrivialService.IdentifiedCategory
-import protocol Catenoid.Model
+import struct TrivialService.IdentifiedCategory
 
 extension Category.Identified: PersistDB.Model {
 	// MARK: Model

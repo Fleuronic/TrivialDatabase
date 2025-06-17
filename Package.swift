@@ -17,7 +17,7 @@ let package = Package(
 	],
 	dependencies: [
 		.package(path: "../TrivialService"),
-		.package(url: "https://github.com/Fleuronic/Catenoid", branch: "main")
+		.package(path: "~/Development/Catena/Submodules/Catenoid")
 	],
 	targets: [
 		.target(

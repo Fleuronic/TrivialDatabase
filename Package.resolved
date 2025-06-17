@@ -1,5 +1,5 @@
 {
-  "originHash" : "742c6bd1d3c1bebcb54deaf3e10b81271e4732c2194939653aeff80cc751395a",
+  "originHash" : "66a79b136d131015aab58a021bec1ea62800f615bd74b57b043489069759829d",
   "pins" : [
     {
       "identity" : "catena",
@@ -7,16 +7,7 @@
       "location" : "https://github.com/Fleuronic/Catena",
       "state" : {
         "branch" : "main",
-        "revision" : "53198be3fe65eee910bca486054f55dd851c52c2"
-      }
-    },
-    {
-      "identity" : "catenoid",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Fleuronic/Catenoid",
-      "state" : {
-        "branch" : "main",
-        "revision" : "2e70f327d88c4b8d978e4d091e555dcae3f3f27b"
+        "revision" : "1ba22c008b681c5b4fb6cc503725bd55e5edc702"
       }
     },
     {
@@ -61,7 +52,7 @@
       "location" : "https://github.com/jordanekay/Schemata",
       "state" : {
         "branch" : "master",
-        "revision" : "b8722d45a75a755f17907ba6d3765c23e5e46a7a"
+        "revision" : "87cccc84dd426bac783f831d585246cac9e10c16"
       }
     },
     {
@@ -88,7 +79,7 @@
       "location" : "https://github.com/Fleuronic/Trivial",
       "state" : {
         "branch" : "main",
-        "revision" : "043cd998fbbb7b5c140f9f45b9c035a9964ad3d9"
+        "revision" : "450790f6fad376982f567b6b0284bb8e29cc668e"
       }
     }
   ],

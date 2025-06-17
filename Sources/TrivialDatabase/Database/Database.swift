@@ -6,8 +6,8 @@ import struct Trivial.Question
 import struct Trivial.Category
 import struct Trivial.Answer
 import struct TrivialService.IdentifiedQuestion
+import struct TrivialService.IdentifiedCategory
 import struct TrivialService.IdentifiedAnswer
-import class TrivialService.IdentifiedCategory
 import protocol TrivialService.QuestionFields
 import protocol TrivialService.CategoryFields
 import protocol Catena.Fields
