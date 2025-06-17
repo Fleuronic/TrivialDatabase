@@ -16,6 +16,6 @@ extension Database: QuestionSpec {
     }
 
     public func listQuestions(of type: Question.QuestionType? = nil, inCategoryWith categoryID: Category.ID? = nil, with difficulty: Question.Difficulty? = nil, count: Int? = nil) async -> Results<Question.IDFields> {
-        await fetch()
+        await fetch(where: \Question.Identified.category.id == categoryID!)
 	}
 }

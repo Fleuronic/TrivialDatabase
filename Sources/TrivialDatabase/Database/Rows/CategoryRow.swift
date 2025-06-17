@@ -40,10 +40,7 @@ extension CategoryRow: Row {
 
 	// MARK: Model
 	public var valueSet: ValueSet<Model> {
-        let valueSet: ValueSet<Model> = [
-			\.value.name == name,
-		]
-
+        let valueSet: ValueSet<Model> = [\.value.name == name]
         return if let parentID = parent?.id {
             valueSet.update(with: [\.parentID == parentID])
         } else {
