@@ -16,16 +16,12 @@ let package = Package(
 		),
 	],
 	dependencies: [
-		.package(path: "../TrivialService"),
-		.package(path: "~/Development/Catena/Submodules/Catenoid")
+        .package(url: "https://github.com/Fleuronic/TrivialService", branch: "main")
 	],
 	targets: [
 		.target(
 			name: "TrivialDatabase",
-			dependencies: [
-				"Catenoid",
-				"TrivialService"
-			]
+			dependencies: ["TrivialService"]
 		)
 	],
 	swiftLanguageModes: [.v6]

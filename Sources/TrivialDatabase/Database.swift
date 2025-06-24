@@ -1,22 +1,21 @@
 // Copyright © Fleuronic LLC. All rights reserved.
 
-import PersistDB
 import Schemata
+import PersistDB
 import struct Trivial.Question
 import struct Trivial.Category
 import struct Trivial.Answer
-import struct TrivialService.IdentifiedQuestion
-import struct TrivialService.IdentifiedCategory
-import struct TrivialService.IdentifiedAnswer
 import protocol TrivialService.QuestionFields
 import protocol TrivialService.CategoryFields
+import protocol TrivialService.AnswerFields
 import protocol Catena.Fields
 import protocol Catenoid.Fields
 import protocol Catenoid.Database
 
 public struct Database<
-	QuestionSpecifiedFields: QuestionFields & Catenoid.Fields<Question.Identified>,
-	CategorySpecifiedFields: CategoryFields & Catenoid.Fields<Category.Identified>
+	QuestionSpecifiedFields: QuestionFields,
+	CategorySpecifiedFields: CategoryFields,
+    AnswerSpecifiedFields: AnswerFields
 >: @unchecked Sendable {
 	public let store: Store<ReadWrite>
 }
@@ -26,16 +25,6 @@ public extension Database {
 	init() async {
 		store = try! await Self.createStore()
 	}
-
-	func specifyingQuestionFields<Fields>(_: Fields.Type) -> Database<
-		Fields,
-		CategorySpecifiedFields
-	> { .init(store: store) }
-
-	 func specifyingCategoryFields<Fields>(_: Fields.Type) -> Database<
-	 	QuestionSpecifiedFields,
-	 	Fields
-	 > { .init(store: store) }
 }
 
 // MARK: -

@@ -4,28 +4,18 @@ import Schemata
 import PersistDB
 import struct Trivial.Category
 import struct Trivial.Question
+import struct TrivialService.IdentifiedCategory
 import protocol Catenoid.Row
 import protocol Catenoid.Model
-import protocol TrivialService.CategoryFields
 
 private import MemberwiseInit
 
-public struct CategoryRow: CategoryFields {
-	public let id: Category.ID
+@_UncheckedMemberwiseInit(.public)
+public struct CategoryRow {
+    public let id: Category.ID
 
 	private let name: String
-    private let parent: Category.IDFields?
-
-
-	public init(
-		id: Category.ID,
-        name: String,
-        parent: Category.IDFields? = nil
-	) {
-		self.id = id
-		self.name = name
-        self.parent = parent
-	}
+    @Init(default: nil) private let parent: Category.IDFields?
 }
 
 // MARK: -
@@ -39,8 +29,10 @@ extension CategoryRow: Row {
 	}
 
 	// MARK: Model
-	public var valueSet: ValueSet<Model> {
-        let valueSet: ValueSet<Model> = [\.value.name == name]
+    public var identifiedModelID: Category.ID? { id }
+
+    public var valueSet: ValueSet<Category.Identified> {
+        let valueSet: ValueSet<Category.Identified> = [\.value.name == name]
         return if let parentID = parent?.id {
             valueSet.update(with: [\.parentID == parentID])
         } else {
