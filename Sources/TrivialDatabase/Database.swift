@@ -11,6 +11,7 @@ import protocol TrivialService.AnswerFields
 import protocol Catena.Fields
 import protocol Catenoid.Fields
 import protocol Catenoid.Database
+import protocol Caesura.Storage
 
 public struct Database<
 	QuestionSpecifiedFields: QuestionFields,
@@ -42,4 +43,8 @@ extension Database: Catenoid.Database {
 		store.delete(Delete<Category.Identified>(nil))
 		store.delete(Delete<Answer.Identified>(nil))
 	}
+}
+
+extension Database: Storage {
+	public typealias StorageError = Never
 }

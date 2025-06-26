@@ -16,7 +16,7 @@ let package = Package(
 		),
 	],
 	dependencies: [
-        .package(url: "https://github.com/Fleuronic/TrivialService", branch: "main")
+        .package(path: "~/Files/Development/Trivial/Submodules/TrivialService")
 	],
 	targets: [
 		.target(
