@@ -1,5 +1,5 @@
 {
-  "originHash" : "66a79b136d131015aab58a021bec1ea62800f615bd74b57b043489069759829d",
+  "originHash" : "3a1e15cbe510147b86df92f18a43d817f951b38d60bec87e730394667c7f72ad",
   "pins" : [
     {
       "identity" : "catena",
@@ -7,7 +7,16 @@
       "location" : "https://github.com/Fleuronic/Catena",
       "state" : {
         "branch" : "main",
-        "revision" : "1ba22c008b681c5b4fb6cc503725bd55e5edc702"
+        "revision" : "681be25be987a63d858c6c952d239ed85a5c1b43"
+      }
+    },
+    {
+      "identity" : "catenoid",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Fleuronic/Catenoid",
+      "state" : {
+        "branch" : "main",
+        "revision" : "81a13203a8e6f1bb7228ea31bf32726ed5a999e1"
       }
     },
     {
@@ -34,7 +43,7 @@
       "location" : "https://github.com/jordanekay/PersistDB",
       "state" : {
         "branch" : "master",
-        "revision" : "6ec3569d31ae6996d2c2256cce6ab0c528c15749"
+        "revision" : "be5355f60f2229f0fd823f320916ce1f64de49fa"
       }
     },
     {
@@ -52,7 +61,7 @@
       "location" : "https://github.com/jordanekay/Schemata",
       "state" : {
         "branch" : "master",
-        "revision" : "87cccc84dd426bac783f831d585246cac9e10c16"
+        "revision" : "1c5443b01cd2fb9f25e63197cfe35b96ba9bd2fc"
       }
     },
     {
@@ -79,7 +88,16 @@
       "location" : "https://github.com/Fleuronic/Trivial",
       "state" : {
         "branch" : "main",
-        "revision" : "450790f6fad376982f567b6b0284bb8e29cc668e"
+        "revision" : "a3d8206ccbdb641f745d348446b442be8631617e"
+      }
+    },
+    {
+      "identity" : "trivialservice",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Fleuronic/TrivialService",
+      "state" : {
+        "branch" : "main",
+        "revision" : "436188c0d3a9de61fb60aed8979b4a21b623eec6"
       }
     }
   ],
