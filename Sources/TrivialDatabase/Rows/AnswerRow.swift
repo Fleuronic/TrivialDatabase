@@ -2,14 +2,13 @@
 
 import Schemata
 import PersistDB
+import MemberwiseInit
 import struct Trivial.Answer
 import struct Trivial.Question
 import struct TrivialService.IdentifiedAnswer
 import protocol Catena.Representable
 import protocol Catenoid.Row
 import protocol Catenoid.Model
-
-private import MemberwiseInit
 
 @_UncheckedMemberwiseInit(.public)
 public struct AnswerRow {
