@@ -11,10 +11,10 @@ import protocol Catenoid.Model
 
 @_UncheckedMemberwiseInit(.public)
 public struct CategoryRow {
-    public let id: Category.ID
+	public let id: Category.ID
 
 	private let name: String
-    @Init(default: nil) private let parent: Category.IDFields?
+	@Init(default: nil) private let parent: Category.IDFields?
 }
 
 // MARK: -
@@ -28,14 +28,14 @@ extension CategoryRow: Row {
 	}
 
 	// MARK: Model
-    public var identifiedModelID: Category.ID? { id }
+	public var identifiedModelID: Category.ID? { id }
 
-    public var valueSet: ValueSet<Category.Identified> {
-        let valueSet: ValueSet<Category.Identified> = [\.value.name == name]
-        return if let parentID = parent?.id {
-            valueSet.update(with: [\.parentID == parentID])
-        } else {
-            valueSet
-        }
+	public var valueSet: ValueSet<Category.Identified> {
+		let valueSet: ValueSet<Category.Identified> = [\.value.name == name]
+		return if let parentID = parent?.id {
+			valueSet.update(with: [\.parentID == parentID])
+		} else {
+			valueSet
+		}
 	}
 }

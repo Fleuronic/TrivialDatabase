@@ -14,10 +14,10 @@ import protocol Catenoid.Model
 public struct QuestionRow {
 	public let id: Question.ID
 
-    private let category: Category.IDFields
-    private let prompt: String
-    @Init(default: Question.QuestionType.multipleChoice) private let questionType: Question.QuestionType
-    @Init(default: Question.Difficulty.easy) private let difficulty: Question.Difficulty
+	private let category: Category.IDFields
+	private let prompt: String
+	@Init(default: Question.QuestionType.multipleChoice) private let questionType: Question.QuestionType
+	@Init(default: Question.Difficulty.easy) private let difficulty: Question.Difficulty
 }
 
 // MARK: -
@@ -35,14 +35,14 @@ extension QuestionRow: Row {
 	}
 
 	// MARK: Model
-    public var identifiedModelID: Question.ID? { id }
+	public var identifiedModelID: Question.ID? { id }
 
-    public var valueSet: ValueSet<Question.Identified> {
+	public var valueSet: ValueSet<Question.Identified> {
 		[
 			\.value.prompt == prompt,
 			\.value.difficulty == difficulty,
 			\.value.questionType == questionType,
-            \.category == category.id
+			\.category == category.id
 		]
 	}
 }

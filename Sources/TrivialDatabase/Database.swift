@@ -16,7 +16,7 @@ import protocol Caesura.Storage
 public struct Database<
 	QuestionSpecifiedFields: QuestionFields,
 	CategorySpecifiedFields: CategoryFields,
-    AnswerSpecifiedFields: AnswerFields
+	AnswerSpecifiedFields: AnswerFields
 >: @unchecked Sendable {
 	public let store: Store<ReadWrite>
 }
