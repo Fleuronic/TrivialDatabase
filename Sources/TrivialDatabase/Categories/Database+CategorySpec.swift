@@ -5,6 +5,6 @@ import protocol Catena.Scoped
 import protocol Catenoid.Fields
 import protocol TrivialService.CategorySpec
 
-extension Database: CategorySpec where CategorySpecifiedFields: Catenoid.Fields<Category.Identified> & Decodable {
+extension Database: CategorySpec where CategorySpecifiedFields: Decodable {
 	public typealias CategoryList = Results<CategorySpecifiedFields>
 }
