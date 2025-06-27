@@ -8,8 +8,6 @@ import struct Trivial.Answer
 import protocol TrivialService.QuestionFields
 import protocol TrivialService.CategoryFields
 import protocol TrivialService.AnswerFields
-import protocol Catena.Fields
-import protocol Catenoid.Fields
 import protocol Catenoid.Database
 import protocol Caesura.Storage
 
